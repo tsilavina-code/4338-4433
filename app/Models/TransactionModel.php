@@ -9,8 +9,9 @@ class TransactionModel extends Model
     protected $table = 'transactions';
     protected $primaryKey = 'id';
     protected $allowedFields = [
-        'client_id', 'type', 'amount', 'fee', 'total', 
-        'recipient', 'balance_before', 'balance_after'
+        'client_id', 'type', 'amount', 'fee', 'commission', 'total',
+        'recipient', 'include_withdraw_fee', 'is_multiple',
+        'balance_before', 'balance_after'
     ];
     
     // Récupère l'historique d'un client

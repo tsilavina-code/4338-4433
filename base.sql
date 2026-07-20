@@ -123,7 +123,7 @@ INSERT INTO fees (operation_id, min_amount, max_amount, fee_amount) VALUES
 -- Commissions pour autres opérateurs (seront utilisés quand les préfixes seront ajoutés en V2)
 INSERT INTO commissions (operator, percentage) VALUES 
 ('Orange', 2.0),
-('Airtel', 1.5);
+('Airtel', 2.0);
 
 -- Clients test (uniquement Yas)
 INSERT INTO clients (phone, balance) VALUES 
