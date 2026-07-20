@@ -24,10 +24,16 @@ class Auth extends BaseController
             return redirect()->back()->with('error', 'Veuillez entrer un numéro');
         }
         
-        // Vérifier que le préfixe est valide
         $prefixModel = new PrefixModel();
+        
+        // Vérifier que le préfixe est valide
         if (!$prefixModel->isValidPrefix($phone)) {
             return redirect()->back()->with('error', 'Numéro invalide (préfixe non reconnu)');
+        }
+        
+        // Vérifier que c'est un numéro Yas (notre opérateur)
+        if (!$prefixModel->isOurOperator($phone)) {
+            return redirect()->back()->with('error', 'Ce numéro n\'est pas un client Yas');
         }
         
         $clientModel = new ClientModel();

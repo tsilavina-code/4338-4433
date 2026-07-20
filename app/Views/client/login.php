@@ -21,17 +21,20 @@
                 <div class="mb-3">
                     <label class="form-label">Numéro de téléphone</label>
                     <input type="text" name="phone" class="form-control" 
-                           placeholder="ex: 0331234567" required maxlength="10">
+                           placeholder="ex: 0341234567" required maxlength="10">
                 </div>
                 <button type="submit" class="btn btn-primary">Se connecter</button>
-
-                <!-- À ajouter en bas du formulaire de login client -->
-                <div class="text-center mt-4">
-                    <a href="<?= base_url('admin/prefixes') ?>" class="btn btn-outline-secondary btn-sm">
-                        Accéder à l'espace Opérateur (Admin)
-                    </a>
-                </div>
             </form>
+            
+            <div class="form-hint" style="text-align: center; margin-top: 1rem;">
+                Seuls les numéros Yas (034, 038) peuvent se connecter
+            </div>
+            
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="<?= base_url('admin/prefixes') ?>" class="btn btn-secondary" style="width: auto; padding: 0.5rem 1rem; font-size: 0.875rem;">
+                    Espace Opérateur
+                </a>
+            </div>
         </div>
     </div>
 </body>
