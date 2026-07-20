@@ -4,7 +4,7 @@ use CodeIgniter\Models;
 
 
 Class FeeModel extends Model {
-    protected $table = 'Baremes_frais';
+    protected $table = 'fees';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['id_type_operation', 'montant_min', 'montant_max', 'frais'];
+    protected $allowedFields = ['operation_id', 'min_amount', 'max_amount', 'fee_amount'];
 }

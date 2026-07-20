@@ -6,5 +6,5 @@ use CodeIgniter\Models;
 Class TransactionModel extends Model {
     protected $table = 'transactions';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['id_client_source', 'id_client_destination', 'id_type_operation', 'montant', 'frais_appliques'];
+    protected $allowedFields = ['client_id', 'type', 'amount', 'fee', 'total', 'recipient', 'balance_before', 'balance_after'];
 }

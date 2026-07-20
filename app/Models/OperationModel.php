@@ -4,7 +4,7 @@ use CodeIgniter\Models;
 
 
 Class OperationModel extends Model {
-    protected $table = 'types_operation';
+    protected $table = 'operations';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['nom'];
+    protected $allowedFields = ['code', 'name', 'description'];
 }

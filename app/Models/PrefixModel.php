@@ -6,5 +6,5 @@ use CodeIgniter\Models;
 Class PrefixModel extends Model {
     protected $table = 'prefixes';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['prefixe'];
+    protected $allowedFields = ['prefix', 'operator'];
 }
