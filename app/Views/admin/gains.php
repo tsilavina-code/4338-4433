@@ -74,7 +74,7 @@
                         <?php foreach($montants_par_operateur as $op): ?>
                         <tr>
                             <td>
-                                <span class="badge bg-dark px-3 py-2 text-uppercase fs-6">
+                               <span class="badge bg-dark text-white px-3 py-2 text-uppercase fs-6">
                                     <?= esc($op['operator']) ?>
                                 </span>
                             </td>
