@@ -24,6 +24,13 @@
                            placeholder="ex: 0331234567" required maxlength="10">
                 </div>
                 <button type="submit" class="btn btn-primary">Se connecter</button>
+
+                <!-- À ajouter en bas du formulaire de login client -->
+                <div class="text-center mt-4">
+                    <a href="<?= base_url('admin/prefixes') ?>" class="btn btn-outline-secondary btn-sm">
+                        Accéder à l'espace Opérateur (Admin)
+                    </a>
+                </div>
             </form>
         </div>
     </div>
