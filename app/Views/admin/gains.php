@@ -14,6 +14,7 @@
             <a class="nav-link" href="<?= base_url('admin/fees') ?>">Barèmes Frais</a>
             <a class="nav-link" href="<?= base_url('admin/comptes') ?>">Situation Comptes</a>
             <a class="nav-link active" href="<?= base_url('admin/gains') ?>">Situation Gains</a>
+            <a class="nav-link text-warning" href="<?= base_url('/') ?>">Login Client</a>
         </div>
     </div>
 </nav>
