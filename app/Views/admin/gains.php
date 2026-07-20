@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Opérateur - Situation Gains</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= base_url('css/admin.css') ?>">
 </head>
-<body class="bg-light">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+<body>
+<nav class="navbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Opérateur Panel</a>
         <div class="navbar-nav">
@@ -18,32 +18,40 @@
         </div>
     </div>
 </nav>
+
 <div class="container">
-    <div class="row mb-4">
-        <div class="col-md-12">
-            <div class="card bg-success text-white p-4 shadow-sm">
-                <h1>Gains Totaux de l'Opérateur</h1>
-                <h2 class="display-4 fw-bold"><?= number_format($total_gains, 2, ',', ' ') ?> Ar</h2>
-            </div>
-        </div>
+    <!-- Stats card -->
+    <div class="stats-card">
+        <h1>Gains Totaux de l'Opérateur</h1>
+        <h2><?= number_format($total_gains, 2, ',', ' ') ?> Ar</h2>
     </div>
 
-    <div class="card p-4 shadow-sm">
-        <h5>Répartition des gains par type d'opération</h5>
-        <table class="table mt-2">
-            <thead><tr><th>Type d'Opération</th><th>Gains Générés</th></tr></thead>
-            <tbody>
-                <?php foreach($gains_details as $detail): ?>
-                <tr>
-                    <td class="text-uppercase fw-bold text-primary"><?= esc($detail['type']) ?></td>
-                    <td class="text-success fw-bold"><?= number_format($detail['total'], 2, ',', ' ') ?> Ar</td>
-                </tr>
-                <?php endforeach; ?>
-                <?php if(empty($gains_details)): ?>
-                <tr><td colspan="2" class="text-muted text-center">Aucun frais collecté pour le moment.</td></tr>
-                <?php endif; ?>
-            </tbody>
-        </table>
+    <!-- Tableau détail -->
+    <div class="card">
+        <div class="card-header">Répartition des gains par type d'opération</div>
+        <div class="card-body" style="padding: 0;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Type d'Opération</th>
+                        <th>Gains Générés</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($gains_details as $detail): ?>
+                    <tr>
+                        <td><span class="badge badge-secondary"><?= esc($detail['type']) ?></span></td>
+                        <td style="color: var(--success); font-weight: 600;"><?= number_format($detail['total'], 2, ',', ' ') ?> Ar</td>
+                    </tr>
+                    <?php endforeach; ?>
+                    <?php if(empty($gains_details)): ?>
+                    <tr>
+                        <td colspan="2" style="text-align: center; color: var(--text-muted); padding: 2rem;">Aucun frais collecté.</td>
+                    </tr>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 </body>
