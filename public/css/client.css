@@ -1,0 +1,348 @@
+/* ============================================================
+   Mobile Money - Thème Client Professionnel
+   Couleurs : Bleu marine, Gris, Blanc
+   ============================================================ */
+
+/* Variables CSS */
+:root {
+    --primary: #1e3a5f;        /* Bleu marine profond */
+    --primary-light: #2c5282;    /* Bleu marine clair */
+    --secondary: #64748b;        /* Gris ardoise */
+    --success: #059669;          /* Vert émeraude (pas flashy) */
+    --warning: #d97706;          /* Orange ambre (pas flashy) */
+    --danger: #dc2626;           /* Rouge sobre */
+    --info: #0369a1;             /* Bleu acier */
+    --bg: #f1f5f9;               /* Gris très clair */
+    --card: #ffffff;             /* Blanc pur */
+    --text: #1e293b;             /* Gris très foncé */
+    --text-light: #64748b;       /* Gris moyen */
+    --border: #e2e8f0;           /* Gris bordure */
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(30, 58, 95, 0.15);
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.btn-logout {
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.btn-logout:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.card-header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* ============================================================
+   SOLDE (Dashboard)
+   ============================================================ */
+.solde-card {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.solde-label {
+    font-size: 0.875rem;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.solde-montant {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.solde-phone {
+    font-size: 0.875rem;
+    opacity: 0.7;
+}
+
+/* ============================================================
+   BOUTONS MENU (Dashboard)
+   ============================================================ */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    color: white;
+}
+
+.menu-btn .icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-depot    { background: linear-gradient(135deg, #059669, #047857); }
+.btn-retrait  { background: linear-gradient(135deg, #d97706, #b45309); }
+.btn-transfert{ background: linear-gradient(135deg, #0369a1, #075985); }
+.btn-historique{ background: linear-gradient(135deg, #475569, #334155); }
+
+/* ============================================================
+   FORMULAIRES (Login, Depot, Retrait, Transfert)
+   ============================================================ */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+}
+
+.auth-title {
+    text-align: center;
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    background: var(--card);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.1);
+}
+
+.form-hint {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 0.25rem;
+}
+
+/* ============================================================
+   BOUTONS FORMULAIRES
+   ============================================================ */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.25);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #059669, #047857);
+    color: white;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #d97706, #b45309);
+    color: white;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #0369a1, #075985);
+    color: white;
+}
+
+.btn-secondary {
+    background: var(--card);
+    color: var(--secondary);
+    border: 1.5px solid var(--border);
+}
+
+.btn-secondary:hover {
+    background: var(--bg);
+}
+
+/* ============================================================
+   ALERTES
+   ============================================================ */
+.alert {
+    padding: 0.875rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.alert-danger {
+    background: #fef2f2;
+    color: var(--danger);
+    border: 1px solid #fecaca;
+}
+
+.alert-success {
+    background: #f0fdf4;
+    color: var(--success);
+    border: 1px solid #bbf7d0;
+}
+
+/* ============================================================
+   TABLEAU HISTORIQUE
+   ============================================================ */
+.table-container {
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    background: var(--bg);
+    padding: 0.875rem 1rem;
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+    border-bottom: 1px solid var(--border);
+}
+
+.table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.table tr:hover {
+    background: #f8fafc;
+}
+
+.badge {
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.badge-depot     { background: #d1fae5; color: #065f46; }
+.badge-retrait   { background: #fef3c7; color: #92400e; }
+.badge-transfert { background: #dbeafe; color: #1e40af; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 480px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .solde-montant {
+        font-size: 2rem;
+    }
+}

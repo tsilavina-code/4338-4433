@@ -1,9 +1,11 @@
 <?php
+
 namespace App\Models;
-use CodeIgniter\Models;
 
+use CodeIgniter\Model;
 
-Class OperationModel extends Model {
+class OperationModel extends Model
+{
     protected $table = 'operations';
     protected $primaryKey = 'id';
     protected $allowedFields = ['code', 'name', 'description'];
