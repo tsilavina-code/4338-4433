@@ -82,13 +82,17 @@ INSERT INTO fees (operation_id, min_amount, max_amount, fee_amount) VALUES
 ((SELECT id FROM operations WHERE code = 'RETRAIT'), 20001, 100000, 500),
 ((SELECT id FROM operations WHERE code = 'RETRAIT'), 100001, 999999999, 1000);
 
--- Frais TRANSFERT
+-- Barèmes de frais : TRANSFERT
 INSERT INTO fees (operation_id, min_amount, max_amount, fee_amount) VALUES 
 ((SELECT id FROM operations WHERE code = 'TRANSFERT'), 0, 10000, 200),
 ((SELECT id FROM operations WHERE code = 'TRANSFERT'), 10001, 999999999, 500);
 
--- Clients test
+
+-- Clients test (un par préfixe)
 INSERT INTO clients (phone, balance) VALUES 
-('0331234567', 50000),
-('0347654321', 25000),
-('0321111111', 100000);
+('0331234567', 50000),   -- Airtel 033
+('0357654321', 25000),   -- Airtel 035
+('0321111111', 100000),  -- Orange 032
+('0372222222', 75000),   -- Orange 037
+('0343333333', 30000),   -- Telma 034
+('0384444444', 60000);   -- Telma 038
