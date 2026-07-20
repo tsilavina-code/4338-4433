@@ -118,3 +118,49 @@ Voir historique
   - Redirige vers login si pas connecté
   - Vérifie montant positif
   - Empêche transfert vers soi-même
+
+
+
+
+Corrections 
+
+- base.sql : ajout champ is_our_operator dans prefixes
+- PrefixModel : ajout méthode isOurOperator()
+- Auth.php : blocage login si numéro pas Yas (is_our_operator = 0)
+- login.php : message "Seuls les numéros Yas peuvent se connecter"
+- login.php : lien vers espace opérateur
+
+
+V2
+
+
+- Transfert vers tous les opérateurs
+  - Yas → Yas : frais normaux
+  - Yas → Orange/Airtel : + commission
+
+-  Commission inter-opérateurs
+  - CommissionModel : récupérer % commission
+  - 2% pour tous les opérateurs externes
+
+-  Option "Inclure frais de retrait"
+  - Checkbox dans le formulaire
+  - Si coché : émetteur paie aussi les frais de retrait du destinataire
+  - Destinataire retire gratuitement
+
+-  Envoi multiple
+  - Bouton "Ajouter un destinataire"
+  - Champs dynamiques avec JavaScript
+  - Liste déroulante des numéros existants
+  - Option "Autre numéro" pour saisie manuelle
+  - Montant total divisé équitablement
+  - Récapitulatif auto avant confirmation
+
+-  Interface transfert clarifiée
+  - Étape 1 : Choisir destinataires
+  - Étape 2 : Montant total
+  - Étape 3 : Options
+  - Récapitulatif avec total à débiter
+
+-  TransactionRecipientModel
+  - Table transaction_recipients
+  - Stocke chaque destinataire d'un envoi multiple

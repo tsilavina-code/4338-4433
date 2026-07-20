@@ -3,26 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Opérateur - Situation Gains V2</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #0d6efd;
-            --success-color: #198754;
-            --danger-color: #dc3545;
-            --warning-color: #ffc107;
-        }
-        body {
-            background-color: #f8f9fa;
-        }
-        .card-stats {
-            border: none;
-            border-radius: 10px;
-            transition: transform 0.2s;
-        }
-        .card-stats:hover {
-            transform: translateY(-3px);
-        }
-    </style>
+     <link rel="stylesheet" href="<?= base_url('css/admin.css') ?>">
+   
 </head>
 <body>
 
@@ -43,7 +25,7 @@
 <div class="container mb-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="fw-bold text-dark m-0">Suivi Financier &amp; Interconnexions</h2>
-        <span class="badge bg-primary px-3 py-2">Version 2 (Simulation Opérateur)</span>
+       
     </div>
 
     <!-- Section 1 : Séparation des gains (Interne vs Externe) -->
