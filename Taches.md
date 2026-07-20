@@ -20,12 +20,24 @@ rm writable/database/mobile_money.db
 php spark db:seed DatabaseSeeder
 
 
-Cote operateur:4433:TSILAVINA
+### Cote operateur:4433:TSILAVINA
+
+Architecture & Base de Données :
+
+- Initialisation et configuration des 5 modèles partagés ('PrefixModel', 'OperationModel', 'FeeModel', 'ClientModel', 'TransactionModel') adaptés au schéma SQLite final.
+- Structuration et isolation complète des routes administratives via un groupe avec namespace dédié dans 'app/Config/Routes.php'.
+
+Fonctionnalités Backend & Frontend (Espace Admin) :
+
+- Gestion des préfixes : Création du contrôleur 'Prefixes.php' et de la vue associée permettant d'afficher les préfixes valides en base, d'en ajouter de nouveaux (avec leur nom d'opérateur associé) et de les supprimer.
+- Gestion des barèmes de frais : Création du contrôleur 'Fees.php' et d'une interface dynamique permettant de lister et de modifier directement en base les tranches de montants minimum, maximum ainsi que les frais associés pour chaque type d'opération.
+- Situation des comptes clients : Création du contrôleur 'Comptes.php' et d'un tableau de bord listant en temps réel tous les clients créés dans le système, affichant leur numéro de téléphone, leur solde actuel et leur date d'inscription.
+- Situation des gains : Création du contrôleur 'Gains.php' exploitant des requêtes d'agrégation SQL (`SUM`) pour afficher le montant total des frais perçus par l'opérateur, ainsi qu'une table de répartition des gains par type de transaction (retraits et transferts).
 
 
 
 
-Cote client :4338:Magy
+### Cote client :4338:Magy
 Base de données SQLite 
   - Fichier base.sql à la racine
   - Tables : prefixes, operations, fees, clients, transactions
