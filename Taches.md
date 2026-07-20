@@ -6,12 +6,6 @@ configuration de la base :
   Voir les tables
 sqlite3 writable/database/mobile_money.db ".tables"
 
--Voir le contenu de chaque table 
-SELECT * FROM prefixes;
-SELECT * FROM operations;
-SELECT * FROM fees;
-SELECT * FROM clients;
-
 Réinitialiser (iz koa sendra magnova base.sql):
 -Supprime l'ancienne base
 rm writable/database/mobile_money.db
