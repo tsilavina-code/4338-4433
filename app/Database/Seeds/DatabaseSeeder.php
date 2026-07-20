@@ -8,25 +8,35 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        // Chemin vers base.sql à la racine du projet
         $sqlFile = ROOTPATH . 'base.sql';
         
-        // Vérifie que le fichier existe
         if (!file_exists($sqlFile)) {
             throw new \Exception("Fichier base.sql introuvable : " . $sqlFile);
         }
         
-        // Lit le contenu
         $sql = file_get_contents($sqlFile);
         
-        // Split par point-virgule (SQLite ne supporte pas multi-requêtes)
+        // Supprime TOUS les commentaires SQL (--)
+        $sql = preg_replace('/--.*$/m', '', $sql);
+        
+        // Supprime les lignes vides multiples
+        $sql = preg_replace("/[\r\n]+/", "\n", $sql);
+        
+        // Split par ; et exécute
         $queries = array_filter(array_map('trim', explode(';', $sql)));
         
         $db = $this->db;
         
         foreach ($queries as $query) {
             if (!empty($query)) {
-                $db->query($query);
+                try {
+                    $db->query($query);
+                } catch (\Exception $e) {
+                    // Ignore "not an error" qui est un faux positif SQLite
+                    if (strpos($e->getMessage(), 'not an error') === false) {
+                        throw $e;
+                    }
+                }
             }
         }
         
