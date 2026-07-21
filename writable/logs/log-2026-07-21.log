@@ -74,3 +74,130 @@ in APPPATH/Views/admin/promotion.php on line 23.
 10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
 11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
 12 SYSTEMPATH/rewrite.php(44): require_once('/opt/lampp/htdocs/L2/S4/4338-4433/public/index.php')
+ERROR - 2026-07-21 08:00:06 --> near ")": syntax error
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Database/Seeds/DatabaseSeeder.php(33): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+ 6 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+ 7 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 9 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-07-21 08:02:08 --> near ")": syntax error
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Database/Seeds/DatabaseSeeder.php(33): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+ 6 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+ 7 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 9 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+DEBUG - 2026-07-21 08:23:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-21 08:23:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-21 08:23:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-21 08:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-21 08:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-21 08:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-21 08:26:01 --> table promotion_commission already exists
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Database/Seeds/DatabaseSeeder.php(33): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+ 6 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+ 7 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 9 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-07-21 08:26:27 --> near ")": syntax error
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Database/Seeds/DatabaseSeeder.php(33): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+ 6 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+ 7 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 9 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+DEBUG - 2026-07-21 08:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-21 08:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-21 08:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-21 08:29:58 --> near ")": syntax error
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Database/Seeds/DatabaseSeeder.php(33): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+ 6 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+ 7 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 9 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-07-21 08:30:30 --> near ")": syntax error
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Database/Seeds/DatabaseSeeder.php(33): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+ 6 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+ 7 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 9 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-07-21 08:34:54 --> near ")": syntax error
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Database/Seeds/DbSeeder.php(33): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DbSeeder->run()
+ 6 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+ 7 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 9 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-07-21 08:35:27 --> near ")": syntax error
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Database/Seeds/DatabaseSeeder.php(33): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+ 6 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+ 7 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 9 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-07-21 08:36:38 --> near ")": syntax error
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Database/Seeds/DatabaseSeeder.php(33): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+ 6 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+ 7 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 9 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+DEBUG - 2026-07-21 08:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

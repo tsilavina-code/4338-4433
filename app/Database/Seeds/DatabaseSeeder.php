@@ -40,6 +40,6 @@ class DatabaseSeeder extends Seeder
             }
         }
         
-        echo "✅ Base initialisée avec succès depuis base.sql\n";
+        echo " Base initialisée avec succès depuis base.sql\n";
     }
 }

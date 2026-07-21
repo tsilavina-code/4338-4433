@@ -186,5 +186,11 @@ modif css client et admin pour animation et aggrandissement des cards
 
 
 
-alea:
+alea1:
 promotion pour les commission du frais de transfert vers le meme operateur
+
+
+alea 2:
+notion d'epargne en pourcentage different pour chaque client 
+une page pour entrer cette pourcentage 
+si le client a un transfert le pourcentage vas vers son epargne 

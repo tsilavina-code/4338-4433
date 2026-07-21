@@ -102,6 +102,22 @@ CREATE TABLE promotion_commission (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+
+
+CREATE TABLE epargne_client (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    client_id INTEGER NOT NULL,
+    percentage REAL NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO pargne_client (client_id, percentage,) VALUES 
+(1, 20, ),
+(2, 25, ),
+(3, 30, );
+
+
+
 -- 3. DONNÉES INITIALES
 
 -- Préfixes : seulement Yas au départ, les autres seront ajoutés via l'admin en V2

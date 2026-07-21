@@ -34,6 +34,9 @@ $routes->group('client', ['namespace' => 'App\Controllers\Client'], function($ro
     // Transfert
     $routes->get('transfert', 'Transfert::index');
     $routes->post('transfert', 'Transfert::doTransfert');
+
+    $routes->get('epargne', 'Epargne::index');
+    $routes->post('epargne', 'Epargne::doepargne');
     
     // Historique
     $routes->get('historique', 'Historique::index');
