@@ -164,3 +164,22 @@ V2
 -  TransactionRecipientModel
   - Table transaction_recipients
   - Stocke chaque destinataire d'un envoi multiple
+
+
+
+
+fichiers modifier :
+Routes.php:admin point entre
+modifie les controllers de Client pour utiliser cette routes ci :    return redirect()->to('/client/login');
+
+fichiers et dossier creer:
+includes/footer.php,navbar_admin.php et navbar_client.php puis les vue qui utilise ces includes on ceci :
+<?= $this->include('includes/navbar_client') ?> pour le navbar client 
+<?= $this->include('includes/navbar_admin') ?> pour le navbar admin
+$active_page mis dans les controllers Prefixes, Fees, Comptes, Gains
+Création Commissions.php (contrôleur) avec actions : index, ajouter, supprimer
+Création commissions.php (vue) avec formulaire pour configurer les % par opérateur
+Ajout  routes dans Routes.php (/admin/commissions)
+Ajout lien "Commissions" dans la navbar admin entre Préfixes et Barèmes Frais
+
+modif css client et admin pour animation et aggrandissement des cards

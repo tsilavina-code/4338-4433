@@ -7,6 +7,7 @@ class Prefixes extends BaseController {
     public function index() {
         $model = new PrefixModel();
         $data['prefixes'] = $model->findAll();
+        $data['active_page'] = 'prefixes';
         return view('admin/prefixes', $data);
     }
 

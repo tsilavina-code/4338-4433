@@ -15,7 +15,7 @@ class Transfert extends BaseController
     public function index()
     {
         if (!session()->get('is_logged_in')) {
-            return redirect()->to('/');
+            return redirect()->to('/client/login');
         }
         
         // Récupérer tous les clients sauf soi-même pour la liste déroulante

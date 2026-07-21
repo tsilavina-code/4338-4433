@@ -8,6 +8,7 @@ class Gains extends BaseController
     {
         $db = \Config\Database::connect();
         
+        $data['active_page'] = 'gains';
         
         $data['gains_interne'] = $db->table('transactions')
                                     ->selectSum('fee')

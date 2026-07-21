@@ -12,7 +12,7 @@ class Retrait extends BaseController
     public function index()
     {
         if (!session()->get('is_logged_in')) {
-            return redirect()->to('/');
+            return redirect()->to('/client/login');
         }
         return view('client/retrait');
     }

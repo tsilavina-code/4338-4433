@@ -10,6 +10,7 @@ class Fees extends BaseController {
                            ->select('fees.*, operations.name as op_name')
                            ->join('operations', 'operations.id = fees.operation_id')
                            ->get()->getResultArray();
+        $data['active_page'] = 'fees';
         return view('admin/fees', $data);
     }
 

@@ -6,18 +6,7 @@
     <link rel="stylesheet" href="<?= base_url('css/admin.css') ?>">
 </head>
 <body>
-<nav class="navbar">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Opérateur Panel</a>
-        <div class="navbar-nav">
-            <a class="nav-link active" href="<?= base_url('admin/prefixes') ?>">Préfixes</a>
-            <a class="nav-link" href="<?= base_url('admin/fees') ?>">Barèmes Frais</a>
-            <a class="nav-link" href="<?= base_url('admin/comptes') ?>">Situation Comptes</a>
-            <a class="nav-link" href="<?= base_url('admin/gains') ?>">Situation Gains</a>
-            <a class="nav-link text-warning" href="<?= base_url('/') ?>">Login Client</a>
-        </div>
-    </div>
-</nav>
+<?= $this->include('includes/navbar_admin') ?>
 
 <div class="container">
     <div class="row">
@@ -73,5 +62,4 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+<?= $this->include('includes/footer') ?>

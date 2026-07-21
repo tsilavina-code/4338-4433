@@ -10,7 +10,7 @@ class Historique extends BaseController
     public function index()
     {
         if (!session()->get('is_logged_in')) {
-            return redirect()->to('/');
+            return redirect()->to('/client/login');
         }
         
         $transactionModel = new TransactionModel();

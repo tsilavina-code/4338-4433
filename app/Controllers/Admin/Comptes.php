@@ -7,6 +7,7 @@ class Comptes extends BaseController {
     public function index() {
         $model = new ClientModel();
         $data['clients'] = $model->findAll();
+        $data['active_page'] = 'comptes';
         return view('admin/comptes', $data);
     }
 }

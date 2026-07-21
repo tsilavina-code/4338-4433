@@ -7,15 +7,16 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 
-// ROUTES CLIENT 
 
-// Page d'accueil = login client
-$routes->get('/', 'Client\Auth::index');
+
+// Page d'accueil = gestion des préfixes
+$routes->get('/', 'Admin\Prefixes::index');
 
 // Groupe pour la partie Client
 $routes->group('client', ['namespace' => 'App\Controllers\Client'], function($routes) {
     
     // Auth
+    $routes->get('login', 'Auth::index');
     $routes->post('login', 'Auth::login');
     $routes->get('logout', 'Auth::logout');
     
@@ -48,7 +49,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function($rout
     $routes->post('prefixes/ajouter', 'Prefixes::ajouter');
     $routes->get('prefixes/supprimer/(:num)', 'Prefixes::supprimer/$1');
 
-    // Types d'opérations (si ton binôme en a besoin)
+    // Types d'opérations 
     $routes->get('operations', 'Operations::index');
     $routes->post('operations/ajouter', 'Operations::ajouter');
     $routes->get('operations/supprimer/(:num)', 'Operations::supprimer/$1');
@@ -56,6 +57,11 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function($rout
     // Barèmes de frais
     $routes->get('fees', 'Fees::index');
     $routes->post('fees/modifier', 'Fees::modifier');
+
+    // Commissions
+    $routes->get('commissions', 'Commissions::index');
+    $routes->post('commissions/ajouter', 'Commissions::ajouter');
+    $routes->get('commissions/supprimer/(:num)', 'Commissions::supprimer/$1');
 
     // Dashboards
     $routes->get('gains', 'Gains::index');

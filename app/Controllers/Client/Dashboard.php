@@ -11,7 +11,7 @@ class Dashboard extends BaseController
     {
         // Vérifier connexion
         if (!session()->get('is_logged_in')) {
-            return redirect()->to('/');
+            return redirect()->to('/client/login');
         }
         
         $clientModel = new ClientModel();

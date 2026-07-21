@@ -7,20 +7,7 @@
    
 </head>
 <body>
-
-<!-- Barre de navigation espace Admin -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Opérateur Panel</a>
-        <div class="navbar-nav">
-            <a class="nav-link" href="<?= base_url('admin/prefixes') ?>">Préfixes</a>
-            <a class="nav-link" href="<?= base_url('admin/fees') ?>">Barèmes Frais</a>
-            <a class="nav-link" href="<?= base_url('admin/comptes') ?>">Situation Comptes</a>
-            <a class="nav-link active" href="<?= base_url('admin/gains') ?>">Situation Gains</a>
-            <a class="nav-link text-warning" href="<?= base_url('/') ?>">Login Client</a>
-        </div>
-    </div>
-</nav>
+<?= $this->include('includes/navbar_admin') ?>
 
 <div class="container mb-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
@@ -100,6 +87,4 @@
         </div>
     </div>
 </div>
-
-</body>
-</html>
+<?= $this->include('includes/footer') ?>
