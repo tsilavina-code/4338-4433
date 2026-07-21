@@ -183,3 +183,8 @@ Ajout  routes dans Routes.php (/admin/commissions)
 Ajout lien "Commissions" dans la navbar admin entre Préfixes et Barèmes Frais
 
 modif css client et admin pour animation et aggrandissement des cards
+
+
+
+alea:
+promotion pour les commission du frais de transfert vers le meme operateur

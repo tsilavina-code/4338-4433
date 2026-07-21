@@ -95,6 +95,13 @@ CREATE TABLE transaction_recipients (
     FOREIGN KEY (transaction_id) REFERENCES transactions(id)
 );
 
+CREATE TABLE promotion_commission (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    operator TEXT NOT NULL UNIQUE,
+    percentage REAL NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
 -- 3. DONNÉES INITIALES
 
 -- Préfixes : seulement Yas au départ, les autres seront ajoutés via l'admin en V2

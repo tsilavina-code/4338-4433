@@ -64,6 +64,11 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function($rout
     $routes->post('commissions/ajouter', 'Commissions::ajouter');
     $routes->get('commissions/supprimer/(:num)', 'Commissions::supprimer/$1');
 
+     // promotion
+    $routes->get('promotion', 'promotion::index');
+    $routes->post('promotion/ajouter', 'promotion::ajouter');
+    $routes->get('prommotion/supprimer/(:num)', 'promotion::supprimer/$1');
+
     // Dashboards
     $routes->get('gains', 'Gains::index');
     $routes->get('comptes', 'Comptes::index');

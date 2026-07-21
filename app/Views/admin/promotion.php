@@ -15,14 +15,12 @@
             <div class="card">
                 <div class="card-header">Ajouter/Modifier une Commission</div>
                 <div class="card-body">
-                    <form action="<?= base_url('admin/commissions/ajouter') ?>" method="post">
+                    <form action="<?= base_url('admin/promotion/ajouter') ?>" method="post">
                         <div class="form-group">
                             <label class="form-label">Opérateur</label>
                             <select name="operator" class="form-control" required>
                                 <option value="">Sélectionner un opérateur</option>
-                                <?php foreach($other_operators as $op): ?>
                                     <option value="<?= esc($op['operator']) ?>"><?= esc($op['operator']) ?></option>
-                                <?php endforeach; ?>
                             </select>
                         </div>
                         <div class="form-group">
@@ -51,17 +49,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach($commissions as $c): ?>
+                            <?php foreach($Promotion_Commission as $pc): ?>
                             <tr>
                                 <td><?= $c['id'] ?></td>
-                                <td><span class="badge badge-secondary"><?= esc($c['operator']) ?></span></td>
+                                <td><span class="badge badge-secondary"><?= esc($pc['operator']) ?></span></td>
                                 <td><?= esc($c['percentage']) ?> %</td>
                                 <td>
                                     <a href="<?= base_url('admin/commissions/supprimer/'.$c['id']) ?>" class="btn btn-danger btn-sm">Supprimer</a>
                                 </td>
                             </tr>
                             <?php endforeach; ?>
-                            <?php if(empty($commissions)): ?>
+                            <?php if(empty($Promotion_Commission)): ?>
                             <tr>
                                 <td colspan="4" style="text-align: center; color: var(--text-muted); padding: 2rem;">
                                     Aucune commission configurée.
