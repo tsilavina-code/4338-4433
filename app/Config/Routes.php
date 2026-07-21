@@ -57,6 +57,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function($rout
     // Barèmes de frais
     $routes->get('fees', 'Fees::index');
     $routes->post('fees/modifier', 'Fees::modifier');
+    $routes->post('fees/ajouter', 'Fees::ajouter');
 
     // Commissions
     $routes->get('commissions', 'Commissions::index');
@@ -66,4 +67,5 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function($rout
     // Dashboards
     $routes->get('gains', 'Gains::index');
     $routes->get('comptes', 'Comptes::index');
+   
 });
